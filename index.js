@@ -8,55 +8,53 @@ function appendToDisplay(input) {
 
 function clearDisplay() {
   display.value = "";
-
-  function calculate() {
-    try {
-      // if (onclick == "Enter") || (event.key == "Enter") {
-      //   display.value = eval(display.value);
-      document.addEventListener("keydown", (event) => {
-        if (event.key == "Enter") {
-          display.value = eval(display.value);
-        }
-      });
-    } catch (error) {
-      display.value = "ERROR";
-    }
-  }
-
-  // Testing for capturing the keypresses
-  document.addEventListener("keydown", (event) => {
-    console.log(event);
-  });
-
-  // document.addEventListener("keydown", (event) => {
-  //   if (event.key == "Equal" || "Enter") {
-  //   }
-  //   keyboardInput.value += event.key;
-  // });
-
-  // $(document).ready(function () {
-  //   var string = "";
-
-  //   /* Calculator input string */
-  //   $(".value").click(function () {
-  //     string += $(this).text();
-  //     $("#calc").text(string);
-  //   });
-
-  //   /* Clear all */
-  //   $(".C").click(function () {
-  //     string = "";
-  //     $("#calc, #result").text("0");
-  //   });
-  //   /* Clear last entry */
-  //   $(".CE").click(function () {
-  //     string = string.slice(0, string.length - 1);
-  //     $("#calc").text(string);
-  //   });
-
-  //   /* Show result */
-  //   $(".equals").click(function () {
-  //     $("#result").text(eval(string));
-  //   });
-  // });
 }
+function calculate() {
+  try {
+    display.value = eval(display.value);
+  } catch (error) {
+    // document.addEventListener("keydown", (event) => {
+    //   if (event.key == "Enter") {
+    //     display.value = eval(display.value);
+    //   }
+    // });
+    display.value = "ERROR";
+  }
+}
+
+// Testing for capturing the keypresses
+document.addEventListener("keydown", (event) => {
+  console.log(event);
+});
+
+// document.addEventListener("keydown", (event) => {
+//   if (event.key == "Equal" || "Enter") {
+//   }
+//   keyboardInput.value += event.key;
+// });
+
+// $(document).ready(function () {
+//   var string = "";
+
+//   /* Calculator input string */
+//   $(".value").click(function () {
+//     string += $(this).text();
+//     $("#calc").text(string);
+//   });
+
+//   /* Clear all */
+//   $(".C").click(function () {
+//     string = "";
+//     $("#calc, #result").text("0");
+//   });
+//   /* Clear last entry */
+//   $(".CE").click(function () {
+//     string = string.slice(0, string.length - 1);
+//     $("#calc").text(string);
+//   });
+
+//   /* Show result */
+//   $(".equals").click(function () {
+//     $("#result").text(eval(string));
+//   });
+// });
