@@ -8,20 +8,15 @@ function appendToDisplay(input) {
 
 function clearDisplay() {
   display.value = "";
+}
 
-  function calculate() {
-    try {
-      // if (onclick == "Enter") || (event.key == "Enter") {
-      //   display.value = eval(display.value);
-      document.addEventListener("keydown", (event) => {
-        if (event.key == "Enter") {
-          display.value = eval(display.value);
-        }
-      });
+function calculate() {
+  try {
+    display.value = eval(display.value);
     } catch (error) {
       display.value = "ERROR";
     }
-  }
+}
 
   // Testing for capturing the keypresses
   document.addEventListener("keydown", (event) => {
@@ -59,4 +54,4 @@ function clearDisplay() {
   //     $("#result").text(eval(string));
   //   });
   // });
-}
+
