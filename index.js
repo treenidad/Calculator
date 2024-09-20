@@ -9,21 +9,17 @@ function appendToDisplay(input) {
 function clearDisplay() {
   display.value = "";
 }
+
 function calculate() {
   try {
     display.value = eval(display.value);
   } catch (error) {
-    // document.addEventListener("keydown", (event) => {
-    //   if (event.key == "Enter") {
-    //     display.value = eval(display.value);
-    //   }
-    // });
     display.value = "ERROR";
   }
 }
 
 // Testing for capturing the keypresses
-document.addEventListener("keydown", (event) => {
+documet.addEventListener("keydown", (event) => {
   console.log(event);
 });
 
@@ -53,6 +49,11 @@ document.addEventListener("keydown", (event) => {
 //     $("#calc").text(string);
 //   });
 
+//   /* Show result */
+//   $(".equals").click(function () {
+//     $("#result").text(eval(string));
+//   });
+// });
 //   /* Show result */
 //   $(".equals").click(function () {
 //     $("#result").text(eval(string));
