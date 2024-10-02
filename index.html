@@ -8,8 +8,9 @@
   </head>
 
   <body>
+   
     <div id="calculator" class="cursor">
-      <input id="display" type="text" class="rq-form-element" />
+      <input id="display" type="text" class="rq-form-element" placeholder="0" autofocus/>
         <i></i>
       <div id="keys">
         <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
@@ -27,7 +28,7 @@
         <button onclick="appendToDisplay('/')" class="operator-btn">/</button>
         <button onclick="appendToDisplay('0')">0</button>
         <button onclick="appendToDisplay('.')">.</button>
-        <button onclick="calculate()">=</button>
+        <button onclick="calculate()" id="calculate">=</button>
         <button onclick="clearDisplay()" class="operator-btn">C</button>
       </div>
     </div>
