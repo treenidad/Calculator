@@ -17,6 +17,7 @@ function calculate() {
   }
 }
 
+// Calls the clearDisplay() function when the "Escape" key is pressed
 document.addEventListener("keydown", function (event) {
   if (event.key === "Escape") {
     // Call your function here
@@ -24,6 +25,7 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
+// Calls the calculate() function when "Enter" key is pressed
 document.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
     // Call your function here
