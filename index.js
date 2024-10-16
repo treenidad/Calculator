@@ -13,6 +13,9 @@ function clearDisplay() {
 function calculate() {
   try {
     display.value = eval(display.value);
+  } catch (error) {
+    display.value = "ERROR";
+  }
 }
 
 document.addEventListener("keydown", function (event) {
@@ -29,3 +32,7 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
+// Testing for capturing the keypresses
+// document.addEventListener("keydown", (event) => {
+//   console.log(event);
+// });
